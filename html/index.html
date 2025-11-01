@@ -10,6 +10,7 @@
     </head>
 
     <body>
+        <!-- Header con búsqueda - Layout adaptativo según tamaño de pantalla -->
         <header class="main-header">
             <figure id="logo-gobierno-nl">
                 <img src="../assets/icons/gobierno-nl.svg" alt="Logo Gobierno de Nuevo León">
@@ -24,19 +25,25 @@
             </form>
         </header>
 
+        <!-- Navegación con categorías - El contenido se genera dinámicamente con generarCategorias() en app.js -->
         <nav aria-label="Navegación Principal" id="nav-principal">
             <ul id="lista-categorias">
+                <!-- Plantilla: El contenido se genera con generarCategorias() en app.js -->
                 <li class="categoria">
                     <a href="#">Categoría 1</a>
                 </li>
             </ul>
         </nav>
 
+        <!-- Contenido principal - Layout adaptativo con grid responsivo -->
         <main>
+            <!-- Productos destacados -->
             <section aria-labelledby="t-productos-destacados" class="section-container" id="destacados">
                 <h2 id="t-productos-destacados">Productos Destacados</h2>
 
+                <!-- Lista generada dinámicamente con generarDestacados() en app.js -->
                 <ul id="lista-productos">
+                    <!-- Plantilla: Cada producto incluye imagen, nombre, marca y precio -->
                     <li class="card">
                         <article>
                             <a href="#">
@@ -53,10 +60,13 @@
                 </ul>
             </section>
 
+            <!-- Emprendedores -->
             <section aria-labelledby="t-emprendedores" class="section-container" id="emprendedores">
                 <h2 id="t-emprendedores">Emprendedores</h2>
 
+                <!-- Lista generada dinámicamente con generarEmprendedores() en app.js -->
                 <ul id="lista-emprendedores">
+                    <!-- Plantilla: Cada emprendedor incluye imagen, nombre y descripción -->
                     <li class="card">
                         <article>
                             <a href="#">
@@ -72,10 +82,13 @@
                 </ul>
             </section>
 
+            <!-- Canastas -->
             <section aria-labelledby="t-canastas" class="section-container" id="canastas">
                 <h2 id="t-canastas">Canastas</h2>
 
+                <!-- Lista generada dinámicamente con generarCanastas() en app.js -->
                 <ul id="lista-canastas">
+                  <!-- Plantilla: Cada canasta incluye imagen, nombre y precio -->
                   <li class="card">
                     <article>
                       <a href="#">
@@ -92,6 +105,7 @@
               </section>
         </main>
 
+        <!-- Footer -->
         <footer>
             <section>
                 <figure class="logos">

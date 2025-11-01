@@ -1,10 +1,17 @@
+// Datos de categorías disponibles
 const categorias = ['Salsas & Aderezos', 'Mieles', 'Licores', 'Dulces', 'Cacao & Snacks', 'Mermeladas', 'Tés', 'Comidas Preparadas'];
 
+/**
+ * Genera dinámicamente la lista de categorías en el navegador
+ * Inserta cada categoría como un elemento <li> con clase 'categoria' dentro de #lista-categorias
+ */
 function generarCategorias() {
     const listaCategorias = document.getElementById('lista-categorias');
     
+    // Limpiar contenido previo
     listaCategorias.innerHTML = '';
     
+    // Crear un elemento <li> con enlace para cada categoría
     categorias.forEach(categoria => {
         const li = document.createElement('li');
         li.className = 'categoria';
@@ -18,6 +25,7 @@ function generarCategorias() {
     });
 }
 
+// Datos de productos destacados - Cada producto incluye foto, nombre, marca y precio
 const destacados = [
     {
         foto: '../assets/images/productos/chimichurri somos sabores.png',
@@ -51,8 +59,14 @@ const destacados = [
     },
 ];
 
+/**
+ * Genera dinámicamente la lista de productos destacados
+ * Crea cards con estructura: <li.card> > <article> > <a> > (figure, h3, p, p)
+ * Cada card muestra imagen, nombre, marca y precio formateado con $
+ */
 function generarDestacados() {
     const listaProductos = document.getElementById('lista-productos');
+    // Limpiar contenido previo
     listaProductos.innerHTML = '';
 
     destacados.forEach(producto => {
@@ -64,34 +78,38 @@ function generarDestacados() {
         const a = document.createElement('a');
         a.href = '#';
 
+        // Imagen del producto
         const figure = document.createElement('figure');
         const img = document.createElement('img');
         img.src = producto.foto;
         img.alt = producto.nombre;
         figure.appendChild(img);
 
+        // Nombre del producto
         const nombre = document.createElement('h3');
         nombre.textContent = producto.nombre;
 
+        // Marca del producto
         const marca = document.createElement('p');
         marca.textContent = producto.marca;
 
+        // Precio formateado con símbolo de peso
         const precio = document.createElement('p');
         precio.textContent = `$${producto.precio}`;
 
+        // Construir estructura DOM: a > (figure, h3, p, p)
         a.appendChild(figure);
         a.appendChild(nombre);
         a.appendChild(marca);
         a.appendChild(precio);
         
         article.appendChild(a);
-
         li.appendChild(article);
-
         listaProductos.appendChild(li);
     });
 }
 
+// Datos de emprendedores - Cada emprendedor incluye foto, nombre y descripción de productos
 const emprendedores = [
     {
         foto: '../assets/images/emprendedores/somos sabores.jpeg',
@@ -146,7 +164,7 @@ const emprendedores = [
     {
         foto: '../assets/images/emprendedores/manosnativas.jpg',
         nombre: 'Manos Nativas',
-        descripcion: 'Té “7 Azahares”'
+        descripcion: 'Té "7 Azahares"'
     },
     {
         foto: '../assets/images/emprendedores/grill kong.jpeg',
@@ -160,8 +178,14 @@ const emprendedores = [
     }
 ]
 
+/**
+ * Genera dinámicamente la lista de emprendedores
+ * Crea cards con estructura: <li.card> > <article> > <a> > (figure, h3, p)
+ * Layout en mobile: grid con imagen a la izquierda, nombre y descripción a la derecha
+ */
 function generarEmprendedores() {
      const listaEmprendedores = document.getElementById('lista-emprendedores');
+     // Limpiar contenido previo
      listaEmprendedores.innerHTML = '';
 
      emprendedores.forEach(emprendedor => {
@@ -173,30 +197,33 @@ function generarEmprendedores() {
         const a = document.createElement('a');
         a.href = '#';
 
+        // Imagen del emprendedor
         const figure = document.createElement('figure');
         const img = document.createElement('img');
         img.src = emprendedor.foto;
         img.alt = emprendedor.nombre;
         figure.appendChild(img);
 
+        // Nombre del emprendedor
         const nombre = document.createElement('h3');
         nombre.textContent = emprendedor.nombre;
 
+        // Descripción de productos del emprendedor
         const descripcion = document.createElement('p');
         descripcion.textContent = emprendedor.descripcion;
 
+        // Construir estructura DOM: a > (figure, h3, p)
         a.appendChild(figure);
         a.appendChild(nombre);
         a.appendChild(descripcion);
 
         article.appendChild(a);
-
         li.appendChild(article);
-
         listaEmprendedores.appendChild(li);
      });
 }
 
+// Datos de canastas - Cada canasta incluye foto, nombre y precio
 const canastas = [
     {
         foto: '../assets/images/canastas/canasta 1.png',
@@ -220,8 +247,14 @@ const canastas = [
     }
 ];
 
+/**
+ * Genera dinámicamente la lista de canastas
+ * Crea cards con estructura: <li.card> > <article> > <a> > (figure, h3, p)
+ * Similar a productos destacados pero sin marca (solo nombre y precio)
+ */
 function generarCanastas() {
-    listaCanastas = document.getElementById('lista-canastas');
+    const listaCanastas = document.getElementById('lista-canastas');
+    // Limpiar contenido previo
     listaCanastas.innerHTML = '';
 
     canastas.forEach(canasta => {
@@ -233,30 +266,36 @@ function generarCanastas() {
         const a = document.createElement('a');
         a.href = '#';
 
+        // Imagen de la canasta
         const figure = document.createElement('figure');
         const img = document.createElement('img');
         img.src = canasta.foto;
         img.alt = canasta.nombre;
         figure.appendChild(img);
 
+        // Nombre de la canasta
         const nombre = document.createElement('h3');
         nombre.textContent = canasta.nombre;
 
+        // Precio formateado con símbolo de peso
         const precio = document.createElement('p');
         precio.textContent = `$${canasta.precio}`;
 
+        // Construir estructura DOM: a > (figure, h3, p)
         a.appendChild(figure);
         a.appendChild(nombre);
         a.appendChild(precio);
 
         article.appendChild(a);
-
         li.appendChild(article);
-
         listaCanastas.appendChild(li);
     });
 }
 
+/**
+ * Inicialización - Ejecuta todas las funciones de generación cuando el DOM está listo
+ * Orden de ejecución: categorías, productos destacados, emprendedores, canastas
+ */
 document.addEventListener('DOMContentLoaded', () => {
     generarCategorias();
     generarDestacados();
