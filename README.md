@@ -11,3 +11,18 @@ El archivo `index.html` contiene el catálogo principal que muestra productos y 
 - **Emprendedores**: Sección que presenta información sobre los emprendedores locales.
 - **Canastas**: Sección para mostrar canastas de productos disponibles.
 - **Footer**: Pie de página con los logos oficiales, información de contacto (teléfono y correo electrónico).
+
+## Diseño Responsive
+
+El proyecto utiliza un enfoque **mobile-first**, optimizado para dispositivos móviles y adaptado para pantallas más grandes mediante media queries.
+
+### Características de Diseño
+
+- **Mobile First**: Diseño optimizado inicialmente para dispositivos móviles.
+- **Media Queries Desktop (1024px+)**: 
+  - Header reorganizado en una sola fila (logo, título y búsqueda).
+  - Navegación sticky que permanece visible al hacer scroll.
+  - Categorías con iconos de flecha y menús desplegables al hover.
+  - Layout de dos columnas para emprendedores y canastas.
+  - Productos y canastas en grid responsivo.
+  - Footer reorganizado en fila para mejor uso del espacio.
