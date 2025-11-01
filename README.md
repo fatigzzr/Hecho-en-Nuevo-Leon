@@ -8,6 +8,6 @@ El archivo `index.html` contiene el catálogo principal que muestra productos y 
 - **Header**: Barra superior con el logo del Gobierno de Nuevo León, título "Hecho en Nuevo León" y una barra de búsqueda para productos.
 - **Navegación**: Menú horizontal con categorías de productos (Salsas & Aderezos, Mieles, Licores, Dulces, Cacao & Snacks, Mermeladas, Tés, Comidas Preparadas).
 - **Productos Destacados**: Sección que muestra una selección de productos destacados con imagen, nombre, marca y precio.
-- **Emprendedores**: Sección que presenta información sobre los emprendedores locales, mostrando los primeros 5 con un botón "Ver más" para ver todos.
+- **Emprendedores**: Sección que presenta información sobre los emprendedores locales.
 - **Canastas**: Sección para mostrar canastas de productos disponibles.
 - **Footer**: Pie de página con los logos oficiales, información de contacto (teléfono y correo electrónico).
