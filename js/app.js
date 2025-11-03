@@ -108,9 +108,15 @@ function generarEmprendedores() {
         // Imagen del emprendedor
         const figure = document.createElement('figure');
         const img = document.createElement('img');
-        img.src = emprendedor.foto;
+        // soportar ambos formatos: 'foto' (antes) o 'logo' (data centralizada)
+        img.src = emprendedor.foto || emprendedor.logo || '../assets/icons/hecho-en-nl.svg';
         img.alt = emprendedor.nombre;
         figure.appendChild(img);
+        // fallback si no carga la imagen
+        img.onerror = function() {
+            this.onerror = null;
+            this.src = '../assets/icons/hecho-en-nl.svg';
+        };
 
         // Nombre del emprendedor
         const nombre = document.createElement('h3');
