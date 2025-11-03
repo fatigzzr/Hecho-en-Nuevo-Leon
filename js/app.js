@@ -114,67 +114,80 @@ const emprendedores = [
     {
         foto: '../assets/images/emprendedores/somos sabores.jpeg',
         nombre: 'Somos Sabores',
-        descripcion: 'Chimichurri, Salsa de Jamaica'
+        descripcion: 'Chimichurri, Salsa de Jamaica',
+        id: 'somos-sabores'
     },
     {
         foto: '../assets/images/emprendedores/del huerto de santiago.jpg',
         nombre: 'Del Huerto de Santiago',
-        descripcion: 'Licor de Manzana'
+        descripcion: 'Licor de Manzana',
+        id: 'del-huerto-de-santiago'
     },
     {
         foto: '../assets/images/emprendedores/abellamia.png',
         nombre: 'Abellamia',
-        descripcion: 'Miel'
+        descripcion: 'Miel',
+        id: 'abellamia'
     },
     {
         foto: '../assets/images/emprendedores/chilito pikin.jpg',
         nombre: 'Chilito Pikin',
-        descripcion: 'Salsas (Macha, Verde, La Machi)'
+        descripcion: 'Salsas (Macha, Verde, La Machi)',
+        id: 'chilito-pikin'
     },
     {
         foto: '../assets/images/emprendedores/los cavazos.jpg',
         nombre: 'Los cavazos',
-        descripcion: 'Salsa Cambray'
+        descripcion: 'Salsa Cambray',
+        id: 'los-cavazos'
     },
     {
         foto: '../assets/images/emprendedores/dulces finos victoria.jpg',
         nombre: 'Dulces finos Victoria',
-        descripcion: 'Rollo de Guayaba, Glorias'
+        descripcion: 'Rollo de Guayaba, Glorias',
+        id: 'dulces-finos-victoria'
     },
     {
         foto: '../assets/images/emprendedores/olartesanal.png',
         nombre: 'Olartesanal',
-        descripcion: 'Cacao Garapiñado'
+        descripcion: 'Cacao Garapiñado',
+        id: 'olartesanal'
     },
     {
         foto: '../assets/images/emprendedores/la monita.png',
         nombre: 'La monita',
-        descripcion: 'Miel, chorizos, empanadas, conservas'
+        descripcion: 'Miel, chorizos, empanadas, conservas',
+        id: 'la-monita'
     },
     {
         foto: '../assets/images/emprendedores/masedi de la cosecha a tu mesa.jpeg',
         nombre: 'MASEDI de la cosecha a tu mesa',
-        descripcion: 'Mermelada'
+        descripcion: 'Mermelada',
+        id: 'masedi-de-la-cosecha-a-tu-mesa'
     },
     {
         foto: '../assets/images/emprendedores/linaje de perros.jpeg',
         nombre: 'Linaje de Perro',
-        descripcion: 'Destilado de agave'
+        descripcion: 'Destilado de agave',
+        id: 'linaje-de-perros'
     },
     {
         foto: '../assets/images/emprendedores/manosnativas.jpg',
         nombre: 'Manos Nativas',
-        descripcion: 'Té "7 Azahares"'
+        descripcion: 'Té "7 Azahares"',
+        id: 'manos-nativas'
     },
     {
         foto: '../assets/images/emprendedores/grill kong.jpeg',
         nombre: 'Grill Kong',
-        descripcion: 'Sazonadores'
+        descripcion: 'Sazonadores',
+        id: 'grill-kong'
     },
     {
         foto: '../assets/images/emprendedores/pikabite.jpg',
         nombre: 'Pikabite',
-        descripcion: 'Salsa Macha'
+        descripcion: 'Salsa Macha',
+        id: 'pikabite'
     }
 ]
 
@@ -195,7 +208,7 @@ function generarEmprendedores() {
         const article = document.createElement('article');
         
         const a = document.createElement('a');
-        a.href = '#';
+        a.href = `emprendedor.html?id=${emprendedor.id}`;
 
         // Imagen del emprendedor
         const figure = document.createElement('figure');
