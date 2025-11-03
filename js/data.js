@@ -20,7 +20,7 @@ const dataEmprendedores = {
     "mieles-dona-abeja": {
         id: "mieles-dona-abeja",
         nombre: "Mieles Doña Abeja",
-        logo: "../assets/logos/dona-abeja.png",
+        logo: "../assets/icons/hecho-en-nl.svg",
         descripcion: "Miel 100% natural de las montañas de Nuevo León. Producción artesanal y sustentable desde 1995.",
         categoria: "Mieles",
         productos: [
@@ -34,7 +34,7 @@ const dataEmprendedores = {
     "somos-sabores": {
         id: "somos-sabores",
         nombre: "Somos Sabores",
-        logo: "../assets/logos/somos-sabores.png",
+        logo: "../assets/images/emprendedores/somos sabores.jpeg",
         descripcion: "Chimichurri y salsas de Jamaica artesanales, inspiradas en recetas locales.",
         categoria: "Salsas & Aderezos",
         productos: [
@@ -47,7 +47,7 @@ const dataEmprendedores = {
     "del-huerto-de-santiago": {
         id: "del-huerto-de-santiago",
         nombre: "Del Huerto de Santiago",
-        logo: "../assets/logos/del-huerto-de-santiago.png",
+        logo: "../assets/images/emprendedores/del huerto de santiago.jpg",
         descripcion: "Licor de manzana artesano, producido con fruta local y destilación tradicional.",
         categoria: "Bebidas",
         productos: [
@@ -59,7 +59,7 @@ const dataEmprendedores = {
     "abellamia": {
         id: "abellamia",
         nombre: "Abellamia",
-        logo: "../assets/logos/abellamia.png",
+        logo: "../assets/images/emprendedores/abellamia.png",
         descripcion: "Miel pura de colmena, en presentaciones para cocina y para consumo directo.",
         categoria: "Mieles",
         productos: [
@@ -71,7 +71,7 @@ const dataEmprendedores = {
     "los-cavazos": {
         id: "los-cavazos",
         nombre: "Los Cavazos",
-        logo: "../assets/logos/los-cavazos.png",
+        logo: "../assets/images/emprendedores/los cavazos.jpg",
         descripcion: "Salsa Cambray tradicional, receta familiar desde hace décadas.",
         categoria: "Salsas & Aderezos",
         productos: [
@@ -83,7 +83,7 @@ const dataEmprendedores = {
     "dulces-finos-victoria": {
         id: "dulces-finos-victoria",
         nombre: "Dulces finos Victoria",
-        logo: "../assets/logos/dulces-finos-victoria.png",
+        logo: "../assets/images/emprendedores/dulces finos victoria.jpg",
         descripcion: "Especialistas en rollos de guayaba y glorias artesanales.",
         categoria: "Dulces",
         productos: [
@@ -96,7 +96,7 @@ const dataEmprendedores = {
     "olartesanal": {
         id: "olartesanal",
         nombre: "Olartesanal",
-        logo: "../assets/logos/olartesanal.png",
+        logo: "../assets/images/emprendedores/olartesanal.png",
         descripcion: "Cacao garapiñado y chocolates artesanales con cacao local.",
         categoria: "Cacao & Chocolates",
         productos: [
@@ -108,7 +108,7 @@ const dataEmprendedores = {
     "la-monita": {
         id: "la-monita",
         nombre: "La monita",
-        logo: "../assets/logos/la-monita.png",
+        logo: "../assets/images/emprendedores/la monita.png",
         descripcion: "Productos caseros: miel, chorizos, empanadas y conservas.",
         categoria: "Conservas & Embutidos",
         productos: [
@@ -121,7 +121,7 @@ const dataEmprendedores = {
     "masedi-de-la-cosecha-a-tu-mesa": {
         id: "masedi-de-la-cosecha-a-tu-mesa",
         nombre: "MASEDI de la cosecha a tu mesa",
-        logo: "../assets/logos/masedi.png",
+        logo: "../assets/images/emprendedores/masedi de la cosecha a tu mesa.jpeg",
         descripcion: "Mermeladas artesanales hechas con fruta de temporada.",
         categoria: "Conservas",
         productos: [
@@ -132,8 +132,8 @@ const dataEmprendedores = {
 
     "linaje-de-perros": {
         id: "linaje-de-perros",
-        nombre: "Linaje de Perro",
-        logo: "../assets/logos/linaje-de-perros.png",
+        nombre: "Linaje de Perros",
+        logo: "../assets/images/emprendedores/linaje-de-perros.png",
         descripcion: "Destilado de agave artesanal, con afinación en barrica.",
         categoria: "Bebidas",
         productos: [
@@ -145,7 +145,7 @@ const dataEmprendedores = {
     "manos-nativas": {
         id: "manos-nativas",
         nombre: "Manos Nativas",
-        logo: "../assets/logos/manos-nativas.png",
+        logo: "../assets/images/emprendedores/manosnativas.jpg",
         descripcion: "Tés y hierbas empaquetadas a mano, mezcla '7 Azahares' entre otras.",
         categoria: "Tés & Infusiones",
         productos: [
@@ -157,7 +157,7 @@ const dataEmprendedores = {
     "grill-kong": {
         id: "grill-kong",
         nombre: "Grill Kong",
-        logo: "../assets/logos/grill-kong.png",
+        logo: "../assets/images/emprendedores/grill kong.jpeg",
         descripcion: "Sazonadores y mezclas para parrilla, hechos con especias locales.",
         categoria: "Sazonadores",
         productos: [
@@ -169,7 +169,7 @@ const dataEmprendedores = {
     "pikabite": {
         id: "pikabite",
         nombre: "Pikabite",
-        logo: "../assets/logos/pikabite.png",
+        logo: "../assets/images/emprendedores/pikabite.jpg",
         descripcion: "Salsa macha y condimentos con influencia regional.",
         categoria: "Salsas & Aderezos",
         productos: [

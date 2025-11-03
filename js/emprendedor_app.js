@@ -46,11 +46,20 @@ function cargarInformacionBasica(emprendedor) {
   const logoContacto = document.getElementById('logo-contacto');
   logoContacto.src = emprendedor.logo;
   logoContacto.alt = `Logo ${emprendedor.nombre}`;
+  // Fallback si la imagen no carga
+  logoContacto.onerror = function() {
+    this.onerror = null;
+    this.src = '../assets/icons/hecho-en-nl.svg';
+  };
   // También actualizar el logo que puede mostrarse en el header (si existe)
   const logoHeader = document.getElementById('logo-emprendedor');
   if (logoHeader) {
     logoHeader.src = emprendedor.logo;
     logoHeader.alt = `Logo ${emprendedor.nombre}`;
+    logoHeader.onerror = function() {
+      this.onerror = null;
+      this.src = '../assets/icons/hecho-en-nl.svg';
+    };
   }
 
   // Descripción
