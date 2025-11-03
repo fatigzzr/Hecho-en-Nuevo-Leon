@@ -1,5 +1,6 @@
 // Base de datos unificada de emprendedores
-const emprendedores = {
+// Renombrado a `dataEmprendedores` para evitar colisiones con otras variables globales
+const dataEmprendedores = {
     // existentes (no cambiar IDs)
     "chilito-pikin": {
         id: "chilito-pikin",
@@ -180,15 +181,81 @@ const emprendedores = {
 
 // Función para obtener un emprendedor por ID
 function obtenerEmprendedor(id) {
-    return emprendedores[id] || null;
+    return dataEmprendedores[id] || null;
 }
 
 // Función para obtener todos los emprendedores (como array)
 function obtenerTodosEmprendedores() {
-    return Object.values(emprendedores);
+    return Object.values(dataEmprendedores);
 }
 
 // Función para obtener emprendedores por categoría
 function obtenerEmprendedoresPorCategoria(categoria) {
-    return Object.values(emprendedores).filter(emp => emp.categoria === categoria);
+    return Object.values(dataEmprendedores).filter(emp => emp.categoria === categoria);
+}
+
+// Datos de productos destacados (centralizados)
+const dataDestacados = [
+    {
+        foto: '../assets/images/productos/chimichurri somos sabores.png',
+        nombre: 'Chimichurri',
+        marca: 'Somos Sabores',
+        precio: 65
+    },
+    {
+        foto: '../assets/images/productos/7 azhares te manos nativas.png',
+        nombre: '7 Azahres Té',
+        marca: 'Manos Nativas',
+        precio: 50
+    },
+    {
+        foto: '../assets/images/productos/cacao garapiñado olartesanal.png',
+        nombre: 'Cacao Garapiñado',
+        marca: 'Olartesanal',
+        precio: 50
+    },
+    {
+        foto: '../assets/images/productos/salsa verde cremosa chilito pikin.png',
+        nombre: 'Salsa Verde Cremosa',
+        marca: 'La compita - Chilito Pikin',
+        precio: 55
+    },
+    {
+        foto: '../assets/images/productos/miel abellamia.png',
+        nombre: 'Miel',
+        marca: 'Abellamia',
+        precio: 79
+    }
+];
+
+function obtenerDestacados() {
+    return dataDestacados;
+}
+
+// Datos de canastas (centralizados)
+const dataCanastas = [
+    {
+        foto: '../assets/images/canastas/canasta 1.png',
+        nombre: 'Canasta 1',
+        precio: 429.00
+    },
+    {
+        foto: '../assets/images/canastas/canasta 2.png',
+        nombre: 'Canasta 2',
+        precio: 505.00
+    },
+    {
+        foto: '../assets/images/canastas/canasta 3.png',
+        nombre: 'Canasta 3',
+        precio: 540.00
+    },
+    {
+        foto: '../assets/images/canastas/canasta 4.png',
+        nombre: 'Canasta 4',
+        precio: 495.00
+    }
+];
+
+function obtenerCanastas() {
+    return dataCanastas;
 }

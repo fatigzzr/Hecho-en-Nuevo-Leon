@@ -7,57 +7,30 @@ const categorias = ['Salsas & Aderezos', 'Mieles', 'Licores', 'Dulces', 'Cacao &
  */
 function generarCategorias() {
     const listaCategorias = document.getElementById('lista-categorias');
-    
+
+    if (!listaCategorias) {
+        console.info('generarCategorias: #lista-categorias no encontrado — se omite generación de categorías en esta página.');
+        return;
+    }
+
     // Limpiar contenido previo
     listaCategorias.innerHTML = '';
-    
+
     // Crear un elemento <li> con enlace para cada categoría
     categorias.forEach(categoria => {
         const li = document.createElement('li');
         li.className = 'categoria';
-        
+
         const a = document.createElement('a');
         a.href = '#';
         a.textContent = categoria;
-        
+
         li.appendChild(a);
         listaCategorias.appendChild(li);
     });
 }
 
-// Datos de productos destacados - Cada producto incluye foto, nombre, marca y precio
-const destacados = [
-    {
-        foto: '../assets/images/productos/chimichurri somos sabores.png',
-        nombre: 'Chimichurri',
-        marca: 'Somos Sabores',
-        precio: 65
-    },
-    {
-        foto: '../assets/images/productos/7 azhares te manos nativas.png',
-        nombre: '7 Azahres Té',
-        marca: 'Manos Nativas',
-        precio: 50
-    },
-    {
-        foto: '../assets/images/productos/cacao garapiñado olartesanal.png',
-        nombre: 'Cacao Garapiñado',
-        marca: 'Olartesanal',
-        precio: 50
-    },
-    {
-        foto: '../assets/images/productos/salsa verde cremosa chilito pikin.png',
-        nombre: 'Salsa Verde Cremosa',
-        marca: 'La compita - Chilito Pikin',
-        precio: 55
-    },
-    {
-        foto: '../assets/images/productos/miel abellamia.png',
-        nombre: 'Miel',
-        marca: 'Abellamia',
-        precio: 79
-    },
-];
+// Productos destacados: obtenidos desde data.js mediante obtenerDestacados()
 
 /**
  * Genera dinámicamente la lista de productos destacados
@@ -69,6 +42,7 @@ function generarDestacados() {
     // Limpiar contenido previo
     listaProductos.innerHTML = '';
 
+    const destacados = (typeof obtenerDestacados === 'function') ? obtenerDestacados() : [];
     destacados.forEach(producto => {
         const li = document.createElement('li');
         li.className = 'card';
@@ -109,87 +83,7 @@ function generarDestacados() {
     });
 }
 
-// Datos de emprendedores - Cada emprendedor incluye foto, nombre y descripción de productos
-const emprendedores = [
-    {
-        foto: '../assets/images/emprendedores/somos sabores.jpeg',
-        nombre: 'Somos Sabores',
-        descripcion: 'Chimichurri, Salsa de Jamaica',
-        id: 'somos-sabores'
-    },
-    {
-        foto: '../assets/images/emprendedores/del huerto de santiago.jpg',
-        nombre: 'Del Huerto de Santiago',
-        descripcion: 'Licor de Manzana',
-        id: 'del-huerto-de-santiago'
-    },
-    {
-        foto: '../assets/images/emprendedores/abellamia.png',
-        nombre: 'Abellamia',
-        descripcion: 'Miel',
-        id: 'abellamia'
-    },
-    {
-        foto: '../assets/images/emprendedores/chilito pikin.jpg',
-        nombre: 'Chilito Pikin',
-        descripcion: 'Salsas (Macha, Verde, La Machi)',
-        id: 'chilito-pikin'
-    },
-    {
-        foto: '../assets/images/emprendedores/los cavazos.jpg',
-        nombre: 'Los cavazos',
-        descripcion: 'Salsa Cambray',
-        id: 'los-cavazos'
-    },
-    {
-        foto: '../assets/images/emprendedores/dulces finos victoria.jpg',
-        nombre: 'Dulces finos Victoria',
-        descripcion: 'Rollo de Guayaba, Glorias',
-        id: 'dulces-finos-victoria'
-    },
-    {
-        foto: '../assets/images/emprendedores/olartesanal.png',
-        nombre: 'Olartesanal',
-        descripcion: 'Cacao Garapiñado',
-        id: 'olartesanal'
-    },
-    {
-        foto: '../assets/images/emprendedores/la monita.png',
-        nombre: 'La monita',
-        descripcion: 'Miel, chorizos, empanadas, conservas',
-        id: 'la-monita'
-    },
-    {
-        foto: '../assets/images/emprendedores/masedi de la cosecha a tu mesa.jpeg',
-        nombre: 'MASEDI de la cosecha a tu mesa',
-        descripcion: 'Mermelada',
-        id: 'masedi-de-la-cosecha-a-tu-mesa'
-    },
-    {
-        foto: '../assets/images/emprendedores/linaje de perros.jpeg',
-        nombre: 'Linaje de Perro',
-        descripcion: 'Destilado de agave',
-        id: 'linaje-de-perros'
-    },
-    {
-        foto: '../assets/images/emprendedores/manosnativas.jpg',
-        nombre: 'Manos Nativas',
-        descripcion: 'Té "7 Azahares"',
-        id: 'manos-nativas'
-    },
-    {
-        foto: '../assets/images/emprendedores/grill kong.jpeg',
-        nombre: 'Grill Kong',
-        descripcion: 'Sazonadores',
-        id: 'grill-kong'
-    },
-    {
-        foto: '../assets/images/emprendedores/pikabite.jpg',
-        nombre: 'Pikabite',
-        descripcion: 'Salsa Macha',
-        id: 'pikabite'
-    }
-]
+// Emprendedores: usar la fuente centralizada en data.js
 
 /**
  * Genera dinámicamente la lista de emprendedores
@@ -197,11 +91,12 @@ const emprendedores = [
  * Layout en mobile: grid con imagen a la izquierda, nombre y descripción a la derecha
  */
 function generarEmprendedores() {
-     const listaEmprendedores = document.getElementById('lista-emprendedores');
-     // Limpiar contenido previo
-     listaEmprendedores.innerHTML = '';
+    const listaEmprendedores = document.getElementById('lista-emprendedores');
+    // Limpiar contenido previo
+    listaEmprendedores.innerHTML = '';
 
-     emprendedores.forEach(emprendedor => {
+    const emprendedores = (typeof obtenerTodosEmprendedores === 'function') ? obtenerTodosEmprendedores() : [];
+    emprendedores.forEach(emprendedor => {
         const li = document.createElement('li');
         li.className = 'card';
 
@@ -237,28 +132,7 @@ function generarEmprendedores() {
 }
 
 // Datos de canastas - Cada canasta incluye foto, nombre y precio
-const canastas = [
-    {
-        foto: '../assets/images/canastas/canasta 1.png',
-        nombre: 'Canasta 1',
-        precio: 429.00
-    },
-    {
-        foto: '../assets/images/canastas/canasta 2.png',
-        nombre: 'Canasta 2',
-        precio: 505.00
-    },
-    {
-        foto: '../assets/images/canastas/canasta 3.png',
-        nombre: 'Canasta 3',
-        precio: 540.00
-    },
-    {
-        foto: '../assets/images/canastas/canasta 4.png',
-        nombre: 'Canasta 4',
-        precio: 495.00
-    }
-];
+// Canastas: usar data centralizada desde data.js
 
 /**
  * Genera dinámicamente la lista de canastas
@@ -270,6 +144,7 @@ function generarCanastas() {
     // Limpiar contenido previo
     listaCanastas.innerHTML = '';
 
+    const canastas = (typeof obtenerCanastas === 'function') ? obtenerCanastas() : [];
     canastas.forEach(canasta => {
         const li = document.createElement('li');
         li.className = 'card';
@@ -310,8 +185,25 @@ function generarCanastas() {
  * Orden de ejecución: categorías, productos destacados, emprendedores, canastas
  */
 document.addEventListener('DOMContentLoaded', () => {
-    generarCategorias();
-    generarDestacados();
-    generarEmprendedores();
-    generarCanastas();
+    try {
+        if (document.getElementById('lista-categorias')) {
+            generarCategorias();
+        } else {
+            console.info('init: #lista-categorias no presente — generarCategorias() omitido');
+        }
+
+        if (document.getElementById('lista-productos')) {
+            generarDestacados();
+        }
+
+        if (document.getElementById('lista-emprendedores')) {
+            generarEmprendedores();
+        }
+
+        if (document.getElementById('lista-canastas')) {
+            generarCanastas();
+        }
+    } catch (err) {
+        console.error('Error iniciando generadores en app.js:', err);
+    }
 });
