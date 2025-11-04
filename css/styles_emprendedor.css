@@ -158,13 +158,14 @@
   /* Desktop / Laptop layout: descripción a la izquierda, contacto a la derecha; productos debajo de la descripción */
   main#main-emprendedor {
     display: grid;
-    grid-template-columns: 1fr 340px; /* contenido principal + columna de contacto */
+    /* Usar una sola columna para que el main no muestre una columna extra */
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
       "descripcion"
       "productos"
       "contacto";
-    gap: 2rem 2.5rem;
+    gap: 2rem;
     align-items: start;
   }
 

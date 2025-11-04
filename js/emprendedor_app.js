@@ -111,7 +111,7 @@ function cargarContacto(emprendedor) {
     const linkInstagram = document.getElementById('link-instagram');
     linkInstagram.href = `https://instagram.com/${contacto.instagram}`;
     linkInstagram.style.display = 'flex';
-    document.getElementById('texto-instagram').textContent = contacto.instagram;
+    document.getElementById('texto-instagram').textContent = emprendedor.nombre;
   }
 
   // Facebook
@@ -119,7 +119,7 @@ function cargarContacto(emprendedor) {
     const linkFacebook = document.getElementById('link-facebook');
     linkFacebook.href = `https://facebook.com/${contacto.facebook}`;
     linkFacebook.style.display = 'flex';
-    document.getElementById('texto-facebook').textContent = contacto.facebook;
+    document.getElementById('texto-facebook').textContent = emprendedor.nombre;
   }
 }
 
