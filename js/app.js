@@ -22,8 +22,13 @@ function generarCategorias() {
         li.className = 'categoria';
 
         const a = document.createElement('a');
-        a.href = '#';
         a.textContent = categoria;
+
+        if (categoria === 'Salsas & Aderezos') {
+            a.href = 'categoria.html';
+        } else {
+            a.href = '#';
+        }
 
         li.appendChild(a);
         listaCategorias.appendChild(li);
