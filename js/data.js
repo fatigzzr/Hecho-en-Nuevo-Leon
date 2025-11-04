@@ -13,11 +13,14 @@ const dataEmprendedores = {
             { id: "prod-2", nombre: "Salsa Verde Cremosa", precio: 505.00, imagen: "../assets/images/productos/salsa verde cremosa chilito pikin.png", descripcion: "Extra picante con habanero" },
             { id: "prod-3", nombre: "Salsa La Machi", precio: 540.00, imagen: "../assets/images/productos/salsa la machi chilito pikin.png", descripcion: "Salsa verde con cilantro" },
             { id: "prod-4", nombre: "Salsa Pikin Chipotle", precio: 495.00, imagen: "../assets/images/productos/dona matcha chilito pikin.jpg", descripcion: "Ahumada con chipotle" }
+
         ],
         contacto: { instagram: "salsaschilitopikin", facebook: "Salsas-Chilito-Pikin-61575954237919/" }
     },
 
     
+        contacto: { instagram: "salsaschilitopikin", facebook: "salsas chilito pikin" }
+    },
 
     // datos combinados desde el array original + info inventada
     "somos-sabores": {
@@ -27,6 +30,8 @@ const dataEmprendedores = {
         descripcion: "Chimichurri y salsas de Jamaica artesanales, inspiradas en recetas locales.",
         categoria: "Salsas & Aderezos",
         productos: [
+            { id: "prod-7", nombre: "Chimichurri Clásico", precio: 180.00, imagen: "../assets/images/productos/chimichurri somos sabores.png", descripcion: "Perfecto para carnes y pan." },
+            { id: "prod-8", nombre: "Salsa de Jamaica", precio: 150.00, imagen: "../assets/images/productos/salsa de jamaica con morita somos sabores.png", descripcion: "Refrescante y ligeramente ácida." }
             { id: "prod-7", nombre: "Chimichurri Clásico", precio: 180.00, imagen: "../assets/images/productos/chimichurri somos sabores.png", descripcion: "Perfecto para carnes y pan." },
             { id: "prod-8", nombre: "Salsa de Jamaica", precio: 150.00, imagen: "../assets/images/productos/salsa de jamaica con morita somos sabores.png", descripcion: "Refrescante y ligeramente ácida." }
         ],
@@ -41,6 +46,7 @@ const dataEmprendedores = {
         categoria: "Bebidas",
         productos: [
             { id: "prod-9", nombre: "Licor de Manzana 500ml", precio: 420.00, imagen: "../assets/images/productos/licor-de-manzana-Huerto-de-Santiago.png", descripcion: "Notas dulces y florales." }
+            { id: "prod-9", nombre: "Licor de Manzana 500ml", precio: 420.00, imagen: "../assets/images/productos/licor de manzana del huerto de santiago.png", descripcion: "Notas dulces y florales." }
         ],
         contacto: { instagram: "delhuertodesantiago" }
     },
@@ -53,6 +59,7 @@ const dataEmprendedores = {
         categoria: "Mieles",
         productos: [
             { id: "prod-10", nombre: "Miel Pura 250g", precio: 140.00, imagen: "../assets/images/productos/miel abellamia.png", descripcion: "Sabor floral, sin aditivos." }
+            { id: "prod-10", nombre: "Miel Pura 250g", precio: 140.00, imagen: "../assets/images/productos/miel abellamia.png", descripcion: "Sabor floral, sin aditivos." }
         ],
         contacto: { instagram: "abellamia", facebook: "Abellamia" }
     },
@@ -64,6 +71,7 @@ const dataEmprendedores = {
         descripcion: "Salsa Cambray tradicional, receta familiar desde hace décadas.",
         categoria: "Salsas & Aderezos",
         productos: [
+            { id: "prod-11", nombre: "Salsa Cambray 300ml", precio: 190.00, imagen: "../assets/images/productos/salsa cambray.png", descripcion: "Salsa agridulce con toque picante." }
             { id: "prod-11", nombre: "Salsa Cambray 300ml", precio: 190.00, imagen: "../assets/images/productos/salsa cambray.png", descripcion: "Salsa agridulce con toque picante." }
         ],
         contacto: { instagram: "loscavazos" }
@@ -78,6 +86,8 @@ const dataEmprendedores = {
         productos: [
             { id: "prod-12", nombre: "Rollo de Guayaba 200g", precio: 95.00, imagen: "../assets/images/productos/rollo de guayaba dulces finos victoria.png", descripcion: "Hecho a mano, la tradición en cada bocado." },
             { id: "prod-13", nombre: "Glorias Tradicionales (6pz)", precio: 120.00, imagen: "../assets/images/productos/glorias dulces finos victoria.png", descripcion: "Dulces de leche y nuez." }
+            { id: "prod-12", nombre: "Rollo de Guayaba 200g", precio: 95.00, imagen: "../assets/images/productos/rollo de guayaba dulces finos victoria.png", descripcion: "Hecho a mano, la tradición en cada bocado." },
+            { id: "prod-13", nombre: "Glorias Tradicionales (6pz)", precio: 120.00, imagen: "../assets/images/productos/glorias dulces finos victoria.png", descripcion: "Dulces de leche y nuez." }
         ],
         contacto: { instagram: "dulcesvictoria" }
     },
@@ -89,6 +99,7 @@ const dataEmprendedores = {
         descripcion: "Cacao garapiñado y chocolates artesanales con cacao local.",
         categoria: "Cacao & Chocolates",
         productos: [
+            { id: "prod-14", nombre: "Cacao Garapiñado 150g", precio: 130.00, imagen: "../assets/images/productos/cacao garapiñado olartesanal.png", descripcion: "Crujiente y chocolatoso." }
             { id: "prod-14", nombre: "Cacao Garapiñado 150g", precio: 130.00, imagen: "../assets/images/productos/cacao garapiñado olartesanal.png", descripcion: "Crujiente y chocolatoso." }
         ],
         contacto: { instagram: "olartesanal" }
@@ -103,6 +114,8 @@ const dataEmprendedores = {
         productos: [
             { id: "prod-15", nombre: "Chorizo Artesanal 400g", precio: 200.00, imagen: "../assets/images/productos/miel la monita.png", descripcion: "Sabor tradicional, sin conservadores." },
             { id: "prod-16", nombre: "Empanada de Queso (unidad)", precio: 45.00, imagen: "../assets/images/productos/miel la monita.png", descripcion: "Masa casera y queso local." }
+            { id: "prod-15", nombre: "Chorizo Artesanal 400g", precio: 200.00, imagen: "../assets/images/productos/miel la monita.png", descripcion: "Sabor tradicional, sin conservadores." },
+            { id: "prod-16", nombre: "Empanada de Queso (unidad)", precio: 45.00, imagen: "../assets/images/productos/miel la monita.png", descripcion: "Masa casera y queso local." }
         ],
         contacto: { instagram: "lamonita" }
     },
@@ -114,6 +127,7 @@ const dataEmprendedores = {
         descripcion: "Mermeladas artesanales hechas con fruta de temporada.",
         categoria: "Conservas",
         productos: [
+            { id: "prod-17", nombre: "Mermelada de Fresa 250g", precio: 95.00, imagen: "../assets/images/productos/mermelada artesanal de calabaza y nuez masedi de la cosecha a tu mesa.png", descripcion: "Con fruta local y bajo en azúcares." }
             { id: "prod-17", nombre: "Mermelada de Fresa 250g", precio: 95.00, imagen: "../assets/images/productos/mermelada artesanal de calabaza y nuez masedi de la cosecha a tu mesa.png", descripcion: "Con fruta local y bajo en azúcares." }
         ],
         contacto: { instagram: "masedi" }
@@ -127,6 +141,7 @@ const dataEmprendedores = {
         categoria: "Bebidas",
         productos: [
             { id: "prod-18", nombre: "Destilado Agave 700ml", precio: 650.00, imagen: "../assets/images/productos/estuche 3 mini botellas linaje de perro.png", descripcion: "Notas herbales y ahumadas." }
+            { id: "prod-18", nombre: "Destilado Agave 700ml", precio: 650.00, imagen: "../assets/images/productos/estuche 3 mini botellas linaje de perro.png", descripcion: "Notas herbales y ahumadas." }
         ],
         contacto: { instagram: "linajedeperros" }
     },
@@ -138,6 +153,7 @@ const dataEmprendedores = {
         descripcion: "Tés y hierbas empaquetadas a mano, mezcla '7 Azahares' entre otras.",
         categoria: "Tés & Infusiones",
         productos: [
+            { id: "prod-19", nombre: "Té 7 Azahares 50g", precio: 85.00, imagen: "../assets/images/productos/7 azhares te manos nativas.png", descripcion: "Relajante y aromático." }
             { id: "prod-19", nombre: "Té 7 Azahares 50g", precio: 85.00, imagen: "../assets/images/productos/7 azhares te manos nativas.png", descripcion: "Relajante y aromático." }
         ],
         contacto: { instagram: "manosnativas" }
@@ -151,6 +167,7 @@ const dataEmprendedores = {
         categoria: "Sazonadores",
         productos: [
             { id: "prod-20", nombre: "Sazonador BBQ 200g", precio: 120.00, imagen: "../assets/images/productos/sazonadores grill kong.png", descripcion: "Mezcla dulce y ahumada." }
+            { id: "prod-20", nombre: "Sazonador BBQ 200g", precio: 120.00, imagen: "../assets/images/productos/sazonadores grill kong.png", descripcion: "Mezcla dulce y ahumada." }
         ],
         contacto: { instagram: "grillkong" }
     },
@@ -162,6 +179,7 @@ const dataEmprendedores = {
         descripcion: "Salsa macha y condimentos con influencia regional.",
         categoria: "Salsas & Aderezos",
         productos: [
+            { id: "prod-21", nombre: "Salsa Macha Pikabite 200ml", precio: 165.00, imagen: "../assets/images/productos/salsa macha pikabite.png", descripcion: "Crujiente y con aceite de calidad." }
             { id: "prod-21", nombre: "Salsa Macha Pikabite 200ml", precio: 165.00, imagen: "../assets/images/productos/salsa macha pikabite.png", descripcion: "Crujiente y con aceite de calidad." }
         ],
         contacto: { instagram: "pikabite", facebook: "Pikabite" }
