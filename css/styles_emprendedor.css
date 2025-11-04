@@ -158,7 +158,7 @@
   /* Desktop / Laptop layout: descripción a la izquierda, contacto a la derecha; productos debajo de la descripción */
   main#main-emprendedor {
     display: grid;
-    grid-template-columns: 1fr 340px; /* contenido principal + columna de contacto */
+    grid-template-columns: 1fr; /* contenido principal + columna de contacto */
     grid-template-rows: auto;
     grid-template-areas:
       "descripcion"
