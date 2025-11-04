@@ -141,7 +141,6 @@ const dataEmprendedores = {
         categoria: "Bebidas",
         productos: [
             { id: "prod-18", nombre: "Destilado Agave 700ml", precio: 650.00, imagen: "../assets/images/productos/estuche 3 mini botellas linaje de perro.png", descripcion: "Notas herbales y ahumadas." }
-            { id: "prod-18", nombre: "Destilado Agave 700ml", precio: 650.00, imagen: "../assets/images/productos/estuche 3 mini botellas linaje de perro.png", descripcion: "Notas herbales y ahumadas." }
         ],
         contacto: { instagram: "linajedeperros" }
     },
@@ -153,7 +152,6 @@ const dataEmprendedores = {
         descripcion: "Tés y hierbas empaquetadas a mano, mezcla '7 Azahares' entre otras.",
         categoria: "Tés & Infusiones",
         productos: [
-            { id: "prod-19", nombre: "Té 7 Azahares 50g", precio: 85.00, imagen: "../assets/images/productos/7 azhares te manos nativas.png", descripcion: "Relajante y aromático." }
             { id: "prod-19", nombre: "Té 7 Azahares 50g", precio: 85.00, imagen: "../assets/images/productos/7 azhares te manos nativas.png", descripcion: "Relajante y aromático." }
         ],
         contacto: { instagram: "manosnativas" }
@@ -167,7 +165,6 @@ const dataEmprendedores = {
         categoria: "Sazonadores",
         productos: [
             { id: "prod-20", nombre: "Sazonador BBQ 200g", precio: 120.00, imagen: "../assets/images/productos/sazonadores grill kong.png", descripcion: "Mezcla dulce y ahumada." }
-            { id: "prod-20", nombre: "Sazonador BBQ 200g", precio: 120.00, imagen: "../assets/images/productos/sazonadores grill kong.png", descripcion: "Mezcla dulce y ahumada." }
         ],
         contacto: { instagram: "grillkong" }
     },
@@ -179,7 +176,6 @@ const dataEmprendedores = {
         descripcion: "Salsa macha y condimentos con influencia regional.",
         categoria: "Salsas & Aderezos",
         productos: [
-            { id: "prod-21", nombre: "Salsa Macha Pikabite 200ml", precio: 165.00, imagen: "../assets/images/productos/salsa macha pikabite.png", descripcion: "Crujiente y con aceite de calidad." }
             { id: "prod-21", nombre: "Salsa Macha Pikabite 200ml", precio: 165.00, imagen: "../assets/images/productos/salsa macha pikabite.png", descripcion: "Crujiente y con aceite de calidad." }
         ],
         contacto: { instagram: "pikabite", facebook: "Pikabite" }

@@ -1,5 +1,6 @@
 .emprendedor-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 1.5rem;
   margin-bottom: 1.5rem;
@@ -159,7 +160,7 @@
   main#main-emprendedor {
     display: grid;
     /* Usar una sola columna para que el main no muestre una columna extra */
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* contenido principal + columna de contacto */
     grid-template-rows: auto;
     grid-template-areas:
       "descripcion"
@@ -188,7 +189,7 @@
 
   .logo-emprendedor { grid-area: logo; }
   #t-descripcion-emprendedor { grid-area: nombre; margin: 0; }
-  #descripcion-texto { grid-area: descripcion; }
+  #descripcion-texto { grid-area: descripcion; margin: .25rem 0 0; line-height: 1.6;}
 }
 
 /* Mostrar header logo y ocultar logo en la sección de contacto en pantallas mayores a teléfono */
