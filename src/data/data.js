@@ -1,7 +1,4 @@
-// Base de datos unificada de emprendedores
-// Renombrado a `dataEmprendedores` para evitar colisiones con otras variables globales
 const dataEmprendedores = {
-    // existentes (no cambiar IDs)
     "chilito-pikin": {
         id: "chilito-pikin",
         nombre: "Chilito Pikin",
@@ -30,7 +27,6 @@ const dataEmprendedores = {
         contacto: { instagram: "mielesdonaabeja", facebook: "mieles dona abeja" }
     },
 
-    // datos combinados desde el array original + info inventada
     "somos-sabores": {
         id: "somos-sabores",
         nombre: "Somos Sabores",
@@ -179,22 +175,18 @@ const dataEmprendedores = {
     }
 };
 
-// Función para obtener un emprendedor por ID
-function obtenerEmprendedor(id) {
+export function obtenerEmprendedor(id) {
     return dataEmprendedores[id] || null;
 }
 
-// Función para obtener todos los emprendedores (como array)
-function obtenerTodosEmprendedores() {
+export function obtenerTodosEmprendedores() {
     return Object.values(dataEmprendedores);
 }
 
-// Función para obtener emprendedores por categoría
-function obtenerEmprendedoresPorCategoria(categoria) {
+export function obtenerEmprendedoresPorCategoria(categoria) {
     return Object.values(dataEmprendedores).filter(emp => emp.categoria === categoria);
 }
 
-// Datos de productos destacados (centralizados)
 const dataDestacados = [
     {
         foto: '../assets/images/productos/chimichurri somos sabores.png',
@@ -228,11 +220,10 @@ const dataDestacados = [
     }
 ];
 
-function obtenerDestacados() {
+export function obtenerDestacados() {
     return dataDestacados;
 }
 
-// Datos de canastas (centralizados)
 const dataCanastas = [
     {
         foto: '../assets/images/canastas/canasta 1.png',
@@ -256,6 +247,59 @@ const dataCanastas = [
     }
 ];
 
-function obtenerCanastas() {
+export function obtenerCanastas() {
     return dataCanastas;
 }
+
+export const categorias = ['Salsas & Aderezos', 'Mieles', 'Licores', 'Dulces', 'Cacao & Snacks', 'Mermeladas', 'Tés', 'Comidas Preparadas'];
+
+export const Salsas_y_Aderezos = [
+    {
+        foto: '../assets/images/productos/chimichurri somos sabores.png',
+        nombre: 'Chimichurri',
+        marca: 'Somos Sabores',
+        precio: 65
+    },
+    {
+        foto: '../assets/images/productos/salsa cambray.png',
+        nombre: 'Salsa Cambray',
+        marca: 'Los Cavazos',
+        precio: 60
+    },
+    {
+        foto: '../assets/images/productos/salsa de jamaica con morita somos sabores.png',
+        nombre: 'Salsa de Jamaica con Morita',
+        marca: 'Somos Sabores',
+        precio: 65
+    },
+    {
+        foto: '../assets/images/productos/salsa la machi chilito pikin.png',
+        nombre: 'Salsa La Machi',
+        marca: 'Chilito Pikin',
+        precio: 75
+    },
+    {
+        foto: '../assets/images/productos/salsa macha chilito pikin.png',
+        nombre: 'Salsa Macha',
+        marca: 'Chilito Pikin',
+        precio: 75
+    },
+    {
+        foto: '../assets/images/productos/salsa macha pikabite.png',
+        nombre: 'Salsa Macha',
+        marca: 'Pikabite',
+        precio: 120
+    },
+    {
+        foto: '../assets/images/productos/salsa verde cremosa chilito pikin.png',
+        nombre: 'Salsa Verde Cremosa',
+        marca: 'Chilito Pikin',
+        precio: 55
+    },
+    {
+        foto: '../assets/images/productos/sazonadores grill kong.png',
+        nombre: 'Sazonador',
+        marca: 'Grill Kong',
+        precio: 190
+    },
+];

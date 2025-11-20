@@ -14,7 +14,6 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Por defecto (mobile): ocultar el logo del header; se mostrará el logo dentro de la sección de contacto */
 #logo-emprendedor {
   display: none;
 }
@@ -30,7 +29,6 @@
   margin-top: 0.5rem;
 }
 
-/* Grid de productos */
 .productos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -39,7 +37,6 @@
   padding: 0;
 }
 
-/* Sección de contacto */
 .contacto-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -97,7 +94,6 @@
   background-color: #ffe033;
 }
 
-/* Mensaje de error */
 .error-section {
   text-align: center;
   padding: 4rem 2rem;
@@ -124,7 +120,6 @@
   background-color: #ea580c;
 }
 
-/* Media queries para desktop */
 @media (min-width: 768px) {
   .emprendedor-header {
     gap: 2rem;
@@ -156,11 +151,9 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
-  /* Desktop / Laptop layout: descripción a la izquierda, contacto a la derecha; productos debajo de la descripción */
   main#main-emprendedor {
     display: grid;
-    /* Usar una sola columna para que el main no muestre una columna extra */
-    grid-template-columns: 1fr; /* contenido principal + columna de contacto */
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
       "descripcion"
@@ -170,12 +163,10 @@
     align-items: start;
   }
 
-  /* Asignar áreas a las secciones */
   #descripcion-emprendedor { grid-area: descripcion; }
   #contacto-emprendedor { grid-area: contacto; }
   #nuestros-productos { grid-area: productos; }
 
-  /* Dentro de la descripción: logo a la izquierda, nombre arriba y descripción debajo a la derecha */
   .emprendedor-header {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -192,7 +183,6 @@
   #descripcion-texto { grid-area: descripcion; margin: .25rem 0 0; line-height: 1.6;}
 }
 
-/* Mostrar header logo y ocultar logo en la sección de contacto en pantallas mayores a teléfono */
 @media (min-width: 421px) {
   #logo-emprendedor {
     display: block;

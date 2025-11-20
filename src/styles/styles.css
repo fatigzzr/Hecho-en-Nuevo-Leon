@@ -1,13 +1,13 @@
-/* Reset y configuración base */
 html {
     font-size: 16px;
 }
 
-/* Layout principal - Grid de 1 columna para mobile-first */
 body {
     font-family: 'Montserrat';
-
     margin: 0px;
+}
+
+#root {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
@@ -62,7 +62,6 @@ figure {
     margin: 0;
 }
 
-/* Contenido principal - Layout en columna, cambia a grid en media query */
 main {
     grid-area: main;
     padding: 0rem 2rem;
@@ -74,7 +73,6 @@ main {
     margin: 1rem 0rem;
 }
 
-/* Header - Grid de 2 filas: logo/título en la primera, búsqueda en la segunda */
 .main-header {
     grid-area: header;
 
@@ -135,7 +133,6 @@ main {
     outline: none;
 }
 
-/* Personalización del botón de cancelar búsqueda con icono SVG */
 #search-bar input[type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: none;
     appearance: none;
@@ -149,7 +146,6 @@ main {
     background-position: center;
 }
 
-/* Navegación - Scroll horizontal para categorías en pantallas pequeñas */
 #nav-principal {
     grid-area: nav;
 
@@ -162,7 +158,6 @@ main {
     -webkit-overflow-scrolling: touch;
 }
 
-/* Ocultar scrollbar pero mantener funcionalidad de scroll */
 #nav-principal::-webkit-scrollbar {
     display: none;
 }
@@ -210,7 +205,6 @@ main {
     gap: 0.5rem;
 }
 
-/* Listas de productos y canastas - Flex wrap para distribución automática */
 #lista-productos, #lista-canastas {
     display: flex;
     flex-direction: row;
@@ -222,7 +216,6 @@ main {
     list-style: none;
 }
 
-/* Lista de emprendedores - Layout en columna con grid interno por item */
 #lista-emprendedores {
     display: flex;
     flex-direction: column;
@@ -234,7 +227,6 @@ main {
     list-style: none;
 }
 
-/* Cards - Flex: 1 para distribución equitativa del espacio */
 .card {
     flex: 1;
     background-color: #FFFFFF;
@@ -258,7 +250,6 @@ main {
     padding: 0.5rem 1rem;
 }
 
-/* Emprendedores - Grid layout: imagen a la izquierda, nombre y descripción a la derecha */
 #lista-emprendedores a {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -285,19 +276,16 @@ main {
     grid-area: descripcion;
 }
 
-/* Imágenes de cards - Altura fija para consistencia visual */
 .card a figure {
     height: 124px;
 }
 
-/* Imágenes de productos - object-fit: cover para rellenar sin deformar */
 .card a figure img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Imágenes de canastas - object-fit: contain para mostrar imagen completa */
 #lista-canastas .card a figure img {
     width: auto;
     height: 100%;
@@ -351,7 +339,6 @@ footer address {
     color: #FFFFFF;
 }
 
-/* Utilidad para ocultar visualmente pero mantener accesibilidad (screen readers) */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -360,15 +347,13 @@ footer address {
     clip: rect(0 0 0 0);
 }
 
-/* Media queries - Ajustes para pantallas más grandes (desktop) */
 @media screen and (min-width: 1024px) {
-    body {
+    #root {
         row-gap: 0;
         height: auto;
         min-height: 100vh;
     }
 
-    /* Header reorganizado: logo, título y búsqueda en una sola fila */
     .main-header {
         display: flex;
         flex-direction: row;
@@ -376,12 +361,10 @@ footer address {
         gap: 1.5rem;
     }
     
-    /* Prevenir que el título se parta en múltiples líneas */
     #t-site {
         white-space: nowrap;
     }
 
-    /* Navegación sticky - Permanece visible al hacer scroll */
     #nav-principal {
         background-color: #FFECD8;
         padding: 0.5rem;
@@ -395,7 +378,6 @@ footer address {
         gap: 2rem;
     }
 
-    /* Categorías - Estilo transparente, solo visible en hover */
     .categoria {
         background-color: transparent;
         border: none;
@@ -406,7 +388,6 @@ footer address {
         justify-content: center;
     }
 
-    /* Icono de flecha en categorías (pseudo-elemento ::after) */
     .categoria a::after {
         content: '';
         display: inline-block;
@@ -419,12 +400,10 @@ footer address {
         margin-left: 0.5rem;
     }
 
-    /* Cambiar color del icono en hover */
     .categoria:hover a::after {
         filter: brightness(0) invert(1);
     }
 
-    /* Main - Cambio a grid de 2 columnas: destacados completo arriba, emprendedores y canastas abajo */
     main {
         margin-top: 2.5rem;
         margin-bottom: 4rem;
@@ -449,7 +428,6 @@ footer address {
         grid-area: canastas;
     }
 
-    /* Listas de emprendedores y canastas - Grid de 2 columnas con altura uniforme */
     #lista-emprendedores, #lista-canastas {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -459,7 +437,6 @@ footer address {
         border-radius: 6px;
     }
 
-    /* Emprendedores - Cambio de layout a flex columna centrado (igual que productos) */
     #lista-emprendedores a {
         display: flex;
         flex-direction: column;
