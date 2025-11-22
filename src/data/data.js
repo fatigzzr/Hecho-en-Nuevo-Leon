@@ -236,7 +236,16 @@ export function obtenerCanastas() {
     return dataCanastas;
 }
 
-export const categorias = ['Salsas & Aderezos', 'Mieles', 'Licores', 'Dulces', 'Cacao & Snacks', 'Mermeladas', 'Tés', 'Comidas Preparadas'];
+export const categorias = [
+    { id: 'salsas-y-aderezos', nombre: 'Salsas & Aderezos' },
+    { id: 'mieles', nombre: 'Mieles' },
+    { id: 'licores', nombre: 'Licores' },
+    { id: 'dulces', nombre: 'Dulces' },
+    { id: 'cacao-y-snacks', nombre: 'Cacao & Snacks' },
+    { id: 'mermeladas', nombre: 'Mermeladas' },
+    { id: 'tes', nombre: 'Tés' },
+    { id: 'comidas-preparadas', nombre: 'Comidas Preparadas' },
+];
 
 export const Salsas_y_Aderezos = [
     {

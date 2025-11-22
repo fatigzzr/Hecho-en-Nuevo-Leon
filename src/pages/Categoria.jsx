@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import Header from '../components/Header';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
@@ -6,6 +7,7 @@ import { Salsas_y_Aderezos } from '../data/data';
 
 function Categoria() {
     const [productos] = useState(Salsas_y_Aderezos);
+    const { nombre } = useParams();
 
     return (
         <>
