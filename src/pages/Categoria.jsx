@@ -11,7 +11,7 @@ function Categoria() {
         <>
             <Header />
             <Nav />
-            <main>
+            <main id="main-categoria">
                 <section aria-labelledby="t-productos-categoria" className="section-container" id="categoria">
                     <h2 id="t-productos-categoria">Salsas & Aderezos</h2>
                     <p id="contador-productos">{productos.length} resultados</p>

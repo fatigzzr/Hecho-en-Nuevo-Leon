@@ -1,0 +1,107 @@
+#lista-productos, #lista-canastas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    margin: 0rem;
+    padding: 0rem;
+    list-style: none;
+}
+
+#lista-emprendedores {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    margin: 0rem;
+    padding: 0rem;
+    list-style: none;
+}
+
+.card {
+    flex: 1;
+    background-color: #FFFFFF;
+    border: 1px solid #58616E;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+    background-color: #FFECD8;
+    border: 1px solid #FF8300;
+}
+
+#lista-productos a, #lista-canastas a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    gap: 0.25rem;
+    padding: 0.5rem 1rem;
+}
+
+#lista-emprendedores a {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        "imagen nombre"
+        "imagen descripcion";
+
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+#lista-emprendedores figure {
+    grid-area: imagen;
+    margin-right: 1rem;
+    width: 124px;
+}
+
+#lista-emprendedores h3 {
+    grid-area: nombre;
+}
+
+#lista-emprendedores p {
+    grid-area: descripcion;
+}
+
+.card a figure {
+    height: 124px;
+}
+
+.card a figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#lista-canastas .card a figure img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (min-width: 1024px) {
+    #lista-emprendedores, #lista-canastas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+        background-color: #F2F7FF;
+        padding: 2rem;
+        border-radius: 6px;
+    }
+
+    #lista-emprendedores a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    
+        gap: 0.25rem;
+        padding: 0.5rem 1rem;
+    }
+}
