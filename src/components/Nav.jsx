@@ -1,4 +1,5 @@
 import { categorias } from '../data/data';
+import { Link } from 'react-router-dom';
 
 function Nav() {
     return (
@@ -6,7 +7,7 @@ function Nav() {
             <ul id="lista-categorias">
                 {categorias.map((categoria, index) => (
                     <li className="categoria" key={index}>
-                        <a href="#">{categoria}</a>
+                        <Link to={`/categorias/${categoria.id}`}>{categoria.nombre}</Link>
                     </li>
                 ))}
             </ul>

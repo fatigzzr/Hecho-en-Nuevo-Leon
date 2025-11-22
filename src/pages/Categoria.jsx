@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import Header from '../components/Header';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
@@ -6,12 +7,13 @@ import { Salsas_y_Aderezos } from '../data/data';
 
 function Categoria() {
     const [productos] = useState(Salsas_y_Aderezos);
+    const { nombre } = useParams();
 
     return (
         <>
             <Header />
             <Nav />
-            <main>
+            <main id="main-categoria">
                 <section aria-labelledby="t-productos-categoria" className="section-container" id="categoria">
                     <h2 id="t-productos-categoria">Salsas & Aderezos</h2>
                     <p id="contador-productos">{productos.length} resultados</p>

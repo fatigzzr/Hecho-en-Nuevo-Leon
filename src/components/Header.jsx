@@ -3,15 +3,17 @@ import { Link } from 'react-router-dom';
 function Header() {
     return (
         <header className="main-header">
-            <figure id="logo-gobierno-nl">
-                <img src="../assets/icons/gobierno-nl.svg" alt="Logo Gobierno de Nuevo León" />
-            </figure>
+            <Link to="/">
+                <figure id="logo-gobierno-nl">
+                    <img src="../assets/icons/gobierno-nl.svg" alt="Logo Gobierno de Nuevo León" />
+                </figure>
+            </Link>
             
-            <h1 id="t-site">
-                <Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>
+            <Link to="/">
+                <h1 id="t-site">
                     Hecho en Nuevo León
-                </Link>
-            </h1>
+                </h1>
+            </Link>
 
             <form role="search" action="#" method="get" aria-label="Buscar productos" id="search-bar">
                 <label htmlFor="query" className="visually-hidden">Buscar</label>

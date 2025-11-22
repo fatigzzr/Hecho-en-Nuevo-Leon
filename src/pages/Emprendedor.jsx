@@ -1,24 +1,23 @@
 import { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Header from '../components/Header';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import { obtenerEmprendedor } from '../data/data';
 
 function Emprendedor() {
-    const [searchParams] = useSearchParams();
+    // El ID viene de la ruta /emprendedor/:id
+    const { id } = useParams();
     const [emprendedor, setEmprendedor] = useState(null);
     const [error, setError] = useState(false);
 
     useEffect(() => {
-        const emprendedorId = searchParams.get('id');
-        
-        if (!emprendedorId) {
+        if (!id) {
             setError(true);
             return;
         }
 
-        const data = obtenerEmprendedor(emprendedorId);
+        const data = obtenerEmprendedor(id);
         
         if (!data) {
             setError(true);
@@ -27,7 +26,7 @@ function Emprendedor() {
 
         setEmprendedor(data);
         document.title = `${data.nombre} - Hecho en Nuevo León`;
-    }, [searchParams]);
+    }, [id]);
 
     const handleImageError = (e) => {
         e.target.onerror = null;
