@@ -7,7 +7,7 @@ function Nav() {
             <ul id="lista-categorias">
                 {categorias.map((categoria, index) => (
                     <li className="categoria" key={index}>
-                        <Link to={`/categoria/${categoria.id}`}>{categoria.nombre}</Link>
+                        <Link to={`/categorias/${categoria.id}`}>{categoria.nombre}</Link>
                     </li>
                 ))}
             </ul>

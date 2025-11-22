@@ -9,7 +9,7 @@ function EmprendedorCard({ emprendedor }) {
     return (
         <li className="card">
             <article>
-                <Link to={`/emprendedor/${emprendedor.id}`}>
+                <Link to={`/emprendedores/${emprendedor.id}`}>
                     <figure>
                         <img 
                             src={emprendedor.foto || emprendedor.logo || '../assets/icons/hecho-en-nl.svg'} 
