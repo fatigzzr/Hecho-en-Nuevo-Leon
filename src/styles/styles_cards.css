@@ -1,0 +1,117 @@
+/* Listas de productos y canastas - Flex wrap para distribución automática */
+#lista-productos, #lista-canastas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    margin: 0rem;
+    padding: 0rem;
+    list-style: none;
+}
+
+/* Lista de emprendedores - Layout en columna con grid interno por item */
+#lista-emprendedores {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    margin: 0rem;
+    padding: 0rem;
+    list-style: none;
+}
+
+/* Cards - Flex: 1 para distribución equitativa del espacio */
+.card {
+    flex: 1;
+    background-color: #FFFFFF;
+    border: 1px solid #58616E;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+    background-color: #FFECD8;
+    border: 1px solid #FF8300;
+}
+
+/* Productos/Canastas - Anchors en columna centrada */
+#lista-productos a, #lista-canastas a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    gap: 0.25rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Emprendedores - Grid layout: imagen a la izquierda, nombre y descripción a la derecha */
+#lista-emprendedores a {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        "imagen nombre"
+        "imagen descripcion";
+
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+#lista-emprendedores figure {
+    grid-area: imagen;
+    margin-right: 1rem;
+    width: 124px;
+}
+
+#lista-emprendedores h3 {
+    grid-area: nombre;
+}
+
+#lista-emprendedores p {
+    grid-area: descripcion;
+}
+
+/* Imágenes de cards - Altura fija para consistencia visual */
+.card a figure {
+    height: 124px;
+}
+
+/* Imágenes de productos - object-fit: cover para rellenar sin deformar */
+.card a figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Imágenes de canastas - object-fit: contain para mostrar imagen completa */
+#lista-canastas .card a figure img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (min-width: 1024px) {
+    /* Listas de emprendedores y canastas - Grid de 2 columnas con altura uniforme */
+    #lista-emprendedores, #lista-canastas {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+        background-color: #F2F7FF;
+        padding: 2rem;
+        border-radius: 6px;
+    }
+
+    /* Emprendedores - Cambio de layout a flex columna centrado (igual que productos) */
+    #lista-emprendedores a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    
+        gap: 0.25rem;
+        padding: 0.5rem 1rem;
+    }
+}

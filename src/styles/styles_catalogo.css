@@ -1,0 +1,46 @@
+#lista-productos-categoria {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#lista-productos-categoria a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.25rem;
+    padding: 0.5rem 1rem;
+}
+
+.filtros-contenedor {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.filtros {
+  font-family: 'Montserrat';
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;           
+  background-color: #FFFFFF;
+  border: 1px solid #9AA4B2;
+  border-radius: 6px;
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  #main-categoria {
+    display: block;
+    grid-template-columns: 1fr !important; 
+  }
+
+  #lista-productos-categoria {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

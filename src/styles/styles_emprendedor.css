@@ -1,0 +1,194 @@
+.emprendedor-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#logo-emprendedor {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#logo-emprendedor {
+  display: none;
+}
+
+.categoria-badge {
+  display: inline-block;
+  background-color: #f97316;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.logo-contacto {
+  text-align: center;
+}
+
+.logo-contacto img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.redes-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contacto-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #1f2937;
+  transition: all 0.3s ease;
+}
+
+.contacto-item:hover {
+  background-color: #e5e7eb;
+  transform: translateX(5px);
+}
+
+.contacto-item img {
+  width: 32px;
+  height: 32px;
+}
+
+.ml-link {
+  background-color: #fff159;
+  color: #2d3277;
+  font-weight: 600;
+}
+
+.ml-link:hover {
+  background-color: #ffe033;
+}
+
+.error-section {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.error-section h2 {
+  color: #ef4444;
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 2rem;
+  background-color: #f97316;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #ea580c;
+}
+
+@media (min-width: 768px) {
+  .emprendedor-header {
+    gap: 2rem;
+  }
+
+  #logo-emprendedor {
+    width: 120px;
+    height: 120px;
+  }
+
+  .productos-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .contacto-grid {
+    grid-template-columns: 200px 1fr;
+    gap: 3rem;
+  }
+
+  .logo-contacto img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .productos-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  main#main-emprendedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "descripcion"
+      "productos"
+      "contacto";
+    gap: 2rem;
+    align-items: start;
+  }
+
+  #descripcion-emprendedor { grid-area: descripcion; }
+  #contacto-emprendedor { grid-area: contacto; }
+  #nuestros-productos { grid-area: productos; }
+
+  .emprendedor-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "logo nombre"
+      "logo descripcion";
+    gap: 1rem 1.5rem;
+    align-items: start;
+  }
+
+  .logo-emprendedor { grid-area: logo; }
+  #t-descripcion-emprendedor { grid-area: nombre; margin: 0; }
+  #descripcion-texto { grid-area: descripcion; margin: .25rem 0 0; line-height: 1.6;}
+}
+
+@media (min-width: 421px) {
+  #logo-emprendedor {
+    display: block;
+  }
+
+  .logo-contacto {
+    display: none;
+  }
+}

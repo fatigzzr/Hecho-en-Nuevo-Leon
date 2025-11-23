@@ -1,28 +1,16 @@
-# Hecho-en-Nuevo-Leon
-Proyecto final de la asignatura de Desarrollo Web. El objetivo es diseñar y programar la base visual de un catálogo web que reúna productos de diferentes emprendedores locales (Hecho en NL).
+# React + Vite
 
-## Catálogo (index.html)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-El archivo `index.html` contiene el catálogo principal que muestra productos y emprendedores locales. El catálogo incluye:
+Currently, two official plugins are available:
 
-- **Header**: Barra superior con el logo del Gobierno de Nuevo León, título "Hecho en Nuevo León" y una barra de búsqueda para productos.
-- **Navegación**: Menú horizontal con categorías de productos (Salsas & Aderezos, Mieles, Licores, Dulces, Cacao & Snacks, Mermeladas, Tés, Comidas Preparadas).
-- **Productos Destacados**: Sección que muestra una selección de productos destacados con imagen, nombre, marca y precio.
-- **Emprendedores**: Sección que presenta información sobre los emprendedores locales.
-- **Canastas**: Sección para mostrar canastas de productos disponibles.
-- **Footer**: Pie de página con los logos oficiales, información de contacto (teléfono y correo electrónico).
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Diseño Responsive
+## React Compiler
 
-El proyecto utiliza un enfoque **mobile-first**, optimizado para dispositivos móviles y adaptado para pantallas más grandes mediante media queries.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### Características de Diseño
+## Expanding the ESLint configuration
 
-- **Mobile First**: Diseño optimizado inicialmente para dispositivos móviles.
-- **Media Queries Desktop (1024px+)**: 
-  - Header reorganizado en una sola fila (logo, título y búsqueda).
-  - Navegación sticky que permanece visible al hacer scroll.
-  - Categorías con iconos de flecha y menús desplegables al hover.
-  - Layout de dos columnas para emprendedores y canastas.
-  - Productos y canastas en grid responsivo.
-  - Footer reorganizado en fila para mejor uso del espacio.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
