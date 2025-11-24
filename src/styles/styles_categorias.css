@@ -1,0 +1,37 @@
+
+#lista-categorias-disponibles {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+.categoria-item {
+    background-color: #FFFFFF;
+    border: 1px solid #58616E;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+.categoria-item:hover {
+    background-color: #FFECD8;
+    border: 1px solid #FF8300;
+}
+
+.categoria-item a {
+    display: flex;
+    padding: 1rem 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+    #lista-categorias-disponibles {
+        gap: 1.5rem;
+    }
+
+
+}
+
+
+

@@ -6,6 +6,7 @@ import './styles/styles_nav.css'
 import './styles/styles_cards.css'
 import './styles/styles_catalogo.css'
 import './styles/styles_emprendedor.css'
+import './styles/styles_categorias.css'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
