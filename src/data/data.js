@@ -301,26 +301,25 @@ export const Salsas_y_Aderezos = [
 export function buscarProductos(termino) {
     const terminoLower = termino.toLowerCase();
     const resultados = [];
+    const productosVistos = new Set();
     
     Object.values(dataEmprendedores).forEach(emprendedor => {
         if (emprendedor.productos) {
             emprendedor.productos.forEach(producto => {
                 if (producto.nombre.toLowerCase().includes(terminoLower) || 
                     emprendedor.nombre.toLowerCase().includes(terminoLower)) {
-                    resultados.push({
-                        ...producto,
-                        foto: producto.imagen,
-                        marca: emprendedor.nombre
-                    });
+                    const key = `${producto.nombre}-${emprendedor.nombre}`;
+                    if (!productosVistos.has(key)) {
+                        productosVistos.add(key);
+                        resultados.push({
+                            ...producto,
+                            foto: producto.imagen,
+                            marca: emprendedor.nombre,
+                            uniqueId: key
+                        });
+                    }
                 }
             });
-        }
-    });
-    
-    dataDestacados.forEach(producto => {
-        if (producto.nombre.toLowerCase().includes(terminoLower) || 
-            producto.marca.toLowerCase().includes(terminoLower)) {
-            resultados.push(producto);
         }
     });
     

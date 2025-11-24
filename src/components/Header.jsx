@@ -36,6 +36,7 @@ function Header() {
                     placeholder="Buscar producto ..." 
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
+                    required
                 />
             </form>
         </header>

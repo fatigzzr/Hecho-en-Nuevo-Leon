@@ -44,8 +44,8 @@ function Home() {
                         
                         <ul id="lista-productos">
                             {resultadosBusqueda.length > 0 ? (
-                                resultadosBusqueda.map((producto, index) => (
-                                    <ProductCard key={`${producto.id || index}`} producto={producto} />
+                                resultadosBusqueda.map((producto) => (
+                                    <ProductCard key={`${producto.id}-${producto.marca}`} producto={producto} />
                                 ))
                             ) : (
                                 <p>No se encontraron resultados para tu búsqueda</p>
