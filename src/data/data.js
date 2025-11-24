@@ -297,3 +297,32 @@ export const Salsas_y_Aderezos = [
         precio: 190
     },
 ];
+
+export function buscarProductos(termino) {
+    const terminoLower = termino.toLowerCase();
+    const resultados = [];
+    
+    Object.values(dataEmprendedores).forEach(emprendedor => {
+        if (emprendedor.productos) {
+            emprendedor.productos.forEach(producto => {
+                if (producto.nombre.toLowerCase().includes(terminoLower) || 
+                    emprendedor.nombre.toLowerCase().includes(terminoLower)) {
+                    resultados.push({
+                        ...producto,
+                        foto: producto.imagen,
+                        marca: emprendedor.nombre
+                    });
+                }
+            });
+        }
+    });
+    
+    dataDestacados.forEach(producto => {
+        if (producto.nombre.toLowerCase().includes(terminoLower) || 
+            producto.marca.toLowerCase().includes(terminoLower)) {
+            resultados.push(producto);
+        }
+    });
+    
+    return resultados;
+}
