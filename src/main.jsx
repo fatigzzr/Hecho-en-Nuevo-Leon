@@ -8,9 +8,12 @@ import './styles/styles_catalogo.css'
 import './styles/styles_emprendedor.css'
 import './styles/styles_categorias.css'
 import App from './App.jsx'
+import { BrowserRouter } from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </StrictMode>,
 )

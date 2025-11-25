@@ -6,14 +6,12 @@ import Emprendedor from './pages/Emprendedor';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/categorias" element={<Categorias />} />
-        <Route path="/categorias/:nombre" element={<Categoria />} />
-        <Route path="/emprendedores/:id" element={<Emprendedor />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/categorias" element={<Categorias />} />
+      <Route path="/categorias/:nombre" element={<Categoria />} />
+      <Route path="/emprendedores/:id" element={<Emprendedor />} />
+    </Routes>
   );
 }
 
