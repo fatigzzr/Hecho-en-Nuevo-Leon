@@ -82,7 +82,7 @@ const dataEmprendedores = {
         descripcion: "Cacao garapiñado y chocolates artesanales con cacao local.",
         categoria: "Cacao & Chocolates",
         productos: [
-            { id: "prod-14", nombre: "Cacao Garapiñado 150g", precio: 130.00, imagen: "../assets/images/productos/cacao garapiñado olartesanal.png", descripcion: "Crujiente y chocolatoso." }
+            { id: "prod-14", nombre: "Cacao Garapiñado 150g", precio: 130.00, imagen: "../assets/images/productos/cacao garapiñado olartesanal.png", descripcion: "Crujiente y chocolatoso." }
         ],
         contacto: { instagram: "olartesanal" }
     },
